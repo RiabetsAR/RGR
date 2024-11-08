@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Проект</title>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
+</head>
+<style>
+    body {
+        font-family: Manrope;
+    }
+
+    .container {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        margin: 0 auto;
+        padding: 20px;
+    }
+
+    .frame-container {
+        margin: 25px;
+        width: 25%;
+        height: 425px;
+        position: relative;
+    }
+
+    .frame-container img {
+        width: 100%;
+        height: 250px;
+        object-fit: cover;
+    }
+
+    .frame {
+        transition: 0.5s;
+        border: 3px solid rgb(27, 27, 27);
+        background-color: rgb(255, 235, 210);
+        border-radius: 5%;
+        overflow: hidden;
+    }
+
+    .frame:hover {
+        transition: 0.5s;
+        box-shadow: 0px 0px 10px black;
+    }
+
+    @media (max-width: 960px) {
+        .frame-container {
+            width: 40%;
+        }
+    }
+
+    @media (max-width: 768px) {
+        .frame-container {
+            width: 100%;
+        }
+
+        .disable {
+            display: none;
+        }
+    }
+
+    .text {
+        margin: 15px 5px 10px 10px;
+        font-size: 25px;
+        font-weight: bold;
+        text-align: center;
+    }
+
+    .caption {
+        margin: 10px 15px 10px 15px;
+        font-size: 15px;
+        text-align: justify;
+    }
+
+    .styled-button {
+        display: flex;
+        padding: 7px 8px;
+        background-color: purple;
+        color: white;
+        border: 0px;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 16px;
+    }
+
+    .price {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin: 20px;
+        font-size: 20px;
+    }
+
+    .header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 20px;
+        width: 100%;
+    }
+
+    .disable {}
+
+    .text1 {
+        align-items: center;
+        justify-content: center;
+        display: flex;
+        gap: 50px;
+        font-size: 30px;
+    }
+
+    .text1 a {
+        text-decoration: none;
+        color: #000;
+    }
+
+    .text1 a1 {
+        text-decoration: underline;
+        text-decoration-color: purple;
+        text-decoration-thickness: 5px;
+    }
+
+    .login {
+        margin: 35px 50px 35px 50px;
+    }
+
+    new::before {
+        content: "New";
+        position: absolute;
+        top: -25px;
+        right: -25px;
+        width: 80px;
+        height: 80px;
+        border-radius: 100%;
+        border: 2px solid black;
+        color: lightgreen;
+        font-size: 60px;
+        background-color: red;
+        text-shadow: 0px 0px 5px black;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .button {
+        display: none;
+        position: relative;
+        align-items: center;
+        justify-content: center;
+        transition: 0.5s;
+        max-width: 300px;
+        padding: 10px;
+        background-color: purple;
+        color: white;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 20px;
+    }
+
+    .dropdown {
+        display: none;
+        position: absolute;
+        justify-content: center;
+        align-items: center;
+        top: 90%;
+        right: -20%;
+        border: 3px solid #5d0074;
+        background-color: purple;
+        padding: 10px;
+        border-radius: 5px;
+    }
+
+    .dropdown a {
+        text-decoration: none;
+        color: white;
+        display: block;
+    }
+
+    .dropdown a:hover {
+        border-radius: 5px;
+        background-color: #5d0074;
+    }
+
+    .button:hover .dropdown {
+        display: block;
+    }
+
+    @media (max-width: 768px) {
+        .button {
+            display: block;
+        }
+    }
+</style>
+
+<body>
+    <header>
+        <div class="header">
+            <img src="2.png" width="100">
+            <div class="button">Меню
+                <div class="dropdown">
+                    <a href="main.html">Головна</a>
+                    <a href="shop.html">Каталог</a>
+                    <a href="cart.html">Кошик</a>
+                </div>
+            </div>
+            <div class="disable">
+                <div class="text1">
+                    <a1 href="main.html">Головна</a1>
+                    <a href="shop.html">Каталог</a>
+                    <a href="cart.html">Кошик</a>
+                </div>
+            </div>
+            <div class="login">
+                <input class="styled-button" type="button" value="Логін">
+            </div>
+        </div>
+    </header>
+    <br><br>
+    <article>
+        <div class="container">
+            <div class="frame-container">
+                <new></new>
+                <div class="frame"> <img src="3.jpg">
+                    <div class="text">Альбом</div>
+                    <div class="caption">Чудово підходить для повсякденних справ.</div>
+                    <div class="price">
+                        <strong>50$</strong>
+                        <input class="styled-button" type="button" value="Придбати">
+                    </div>
+                </div>
+            </div>
+            <div class="frame-container">
+                <div class="frame"> <img src="3.jpg">
+                    <div class="text">Альбом</div>
+                    <div class="caption">Чудово підходить для повсякденних справ.</div>
+                    <div class="price">
+                        <strong>50$</strong>
+                        <input class="styled-button" type="button" value="Придбати">
+                    </div>
+                </div>
+            </div>
+            <div class="frame-container">
+                <div class="frame"> <img src="3.jpg">
+                    <div class="text">Альбом</div>
+                    <div class="caption">Чудово підходить для повсякденних справ.</div>
+                    <div class="price">
+                        <strong>50$</strong>
+                        <input class="styled-button" type="button" value="Придбати">
+                    </div>
+                </div>
+            </div>
+            <div class="frame-container">
+                <div class="frame"> <img src="3.jpg">
+                    <div class="text">Альбом</div>
+                    <div class="caption">Чудово підходить для повсякденних справ.</div>
+                    <div class="price">
+                        <strong>50$</strong>
+                        <input class="styled-button" type="button" value="Придбати">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </article>
+    <footer>
+    </footer>
+</body>
+
+</html>
